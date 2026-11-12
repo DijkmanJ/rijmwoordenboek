@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rijmwoordenboek</title>
+<meta name="description" content="Nederlands rijmwoordenboek met rap-rijm: volrijm, klinkerrijm, meerlettergrepige rijm, bijna-rijm en medeklinkerrijm.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Rijmwoordenboek</h1>
+    <p class="sub">Voor gedichten, raps en Sinterklaasrijmen. Tik één woord in.</p>
+  </header>
+  <form id="form" autocomplete="off">
+    <input id="q" type="search" placeholder="bijv. pepernoten" aria-label="Woord" autofocus spellcheck="false" autocapitalize="off">
+    <button type="submit">Zoek</button>
+  </form>
+  <p id="status" class="status">Woordenlijst laden…</p>
+  <section id="results"></section>
+  <details class="legend">
+    <summary>Hoe werkt de rangschikking?</summary>
+    <p>Woorden die over méér lettergrepen rijmen staan bovenaan: drie lettergrepen klinkerrijm wint van één lettergreep volrijm. Binnen elke groep staan eerst de <b>volrijmen</b> (zelfde klanken vanaf de klinker), dan <b>klinkerrijm</b> (zelfde klinkers, andere medeklinkers) en <b>bijna-rijm</b> (klinkers die op elkaar lijken, zoals ie/i of aa/a). Onderaan staat <b>medeklinkerrijm</b> (andere klinker, zelfde slot). Woorden die op je zoekwoord eindigen staan achteraan in hun groep.</p>
+    <p>Uitspraak uit ipa-dict, Wiktionary en OpenTaal. Uitspraak is soms gegokt, dus niet alles klopt.</p>
+  </details>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+:root {
+  --bg: #faf7f2; --fg: #1d1a16; --muted: #6f675d; --line: #e4ddd2; --card: #fff;
+  --accent: #b3261e; --perfect: #b3261e; --klinker: #1d1a16; --bijna: #6f675d; --chip: #f1ece4;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171513; --fg: #f1ece4; --muted: #a39a8e; --line: #34302b; --card: #201d1a;
+    --accent: #ff8a7a; --perfect: #ff8a7a; --klinker: #f1ece4; --bijna: #a39a8e; --chip: #2a2622;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+h1 { margin: 0; font-size: 2rem; letter-spacing: -0.02em; }
+.sub { margin: 4px 0 20px; color: var(--muted); }
+form { display: flex; gap: 8px; position: sticky; top: 0; background: var(--bg); padding: 8px 0; z-index: 1; }
+input { flex: 1; min-width: 0; font: inherit; font-size: 1.15rem; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--fg); }
+input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+button { font: inherit; padding: 10px 18px; border: 0; border-radius: 10px; background: var(--accent); color: #fff; cursor: pointer; }
+.status { color: var(--muted); min-height: 1.5em; margin: 8px 0 16px; }
+.group { margin: 0 0 28px; }
+.group h2 { font-size: 1.05rem; margin: 0 0 2px; }
+.group .part { color: var(--muted); font-weight: normal; }
+.group h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 12px 0 6px; font-weight: 600; }
+.words { display: flex; flex-wrap: wrap; gap: 6px; }
+.words a { display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--klinker); text-decoration: none; }
+.words a:hover { outline: 1px solid var(--muted); }
+.words a.perfect { color: var(--perfect); font-weight: 600; }
+.words a.bijna { color: var(--bijna); }
+.words a.same { opacity: 0.6; }
+.more { margin-top: 8px; background: none; color: var(--accent); padding: 4px 0; }
+.legend { color: var(--muted); font-size: 0.92rem; margin-top: 32px; border-top: 1px solid var(--line); padding-top: 12px; }
+.legend summary { cursor: pointer; }
